@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusMate - Login</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body>
+    <div class="main">
+       <nav class="navbar">
+  <div class="logo-container">
+    <img src="/assets/CampusMate Logo/main_logo.png" alt="CampusMate Logo" class="logo">
+  </div>
+  
+  <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle">
+  <label for="mobile-menu-toggle" class="mobile-menu-btn">
+    <i class="fas fa-bars"></i>
+    <i class="fas fa-times"></i>
+  </label>
+</nav>
+    </div>
+
+    <div class="login-page-container">
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1>Connect with peers, unlock your potential</h1>
+                <p>Join thousands of students and mentors building meaningful connections across institutions.</p>
+            </div>
+        </div>
+
+        <div class="login-form-container">
+            <form class="login-form" id="loginForm">
+                <div class="form-header">
+                    <h2 class="form-title">Welcome back!</h2>
+                    <p class="form-subtitle">Login to continue your journey</p>
+                </div>
+
+                <!-- User Type Selection -->
+                <div class="form-group">
+                    <label class="form-label">I am logging in as:</label>
+                    <div class="user-type-selector">
+                        <input type="radio" id="loginTypeStudent" name="loginType" value="student" checked>
+                        <label for="loginTypeStudent" class="user-type-option">
+                            <i class="fas fa-user-graduate"></i>
+                            <span>Student</span>
+                        </label>
+
+                        <input type="radio" id="loginTypeMentor" name="loginType" value="mentor">
+                        <label for="loginTypeMentor" class="user-type-option">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Mentor</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Email or username</label>
+                    <input type="text" id="email" class="form-control" placeholder="Enter your email or username" required>
+                    <div class="error-message" id="email-error">Please enter a valid email or username</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+                    <button type="button" class="password-toggle" id="togglePassword">
+                        <i class="far fa-eye"></i>
+                    </button>
+                    <div class="error-message" id="password-error">Password must be at least 8 characters</div>
+                </div>
+
+                <div class="form-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <a href="/forgot-password" class="forgot-password">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="primary-btn">Login</button>
+
+                <div class="divider">or continue with</div>
+
+                <div class="social-login">
+                    <button type="button" class="social-btn">
+                        <i class="fab fa-google"></i>
+                        Google
+                    </button>
+                    <button type="button" class="social-btn">
+                        <i class="fab fa-facebook-f"></i>
+                        Facebook
+                    </button>
+                </div>
+
+                <p class="signup-link">Don't have an account? <a href="/auth/register.html">Sign up</a></p>
+
+                <input type="hidden" name="_csrf" value="csrf-token-placeholder">
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/login.js"></script>
+</body>
+
+</html>
